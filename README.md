@@ -1,8 +1,11 @@
 cordova-app-loader
 ==========
 
-[![Join the chat at https://gitter.im/markmarijnissen/cordova-app-loader](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/markmarijnissen/cordova-app-loader?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 > Remote update your Cordova App
+
+Forked from [markmarijnissen/cordova-app-loader](https://github.com/markmarijnissen/cordova-app-loader) and rewritten to simplify the process of integration into existing cordova app.
+
+todo: rewrite everything below:
 
 1. Write a **manifest.json** to **bootstrap.js** your app.
 2. Build and deploy your app.
