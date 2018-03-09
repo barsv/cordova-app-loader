@@ -17,7 +17,7 @@
 
     var check = function() {
         var loader = new CordovaAppLoader({
-            serverRoot: 'http://localhost:3000/',
+            serverRoot: 'http://localhost:3000/www/',
             debug: true
         });
         loader.check()

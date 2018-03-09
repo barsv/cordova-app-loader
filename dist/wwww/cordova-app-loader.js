@@ -259,6 +259,7 @@
         );
     };
 
+    /** returns true if there are updates available on server for sync */
     CordovaAppLoader.prototype.check = function () {
         var self = this;
         return new Promise(function (resolve, reject) {
@@ -266,28 +267,29 @@
                 [self._getServerManifestVersion(), self._getBundledManifest(), self._getStorageManifest()]
             ).then(function ([serverManifestVersion, bundledManifest, storageManifest]) {
                 serverManifestVersion = serverManifestVersion ? serverManifestVersion.version : null;
-                // if there are no updates then just return
-                if (bundledManifest.version === serverManifestVersion
+                // if we already have up to date version then we don't need to update
+                var dontNeedToSync = bundledManifest.version === serverManifestVersion
                     // storageManifest may be null if no updates were ever made.
-                    // if we already have up to date version on disk then just return
-                    || storageManifest && storageManifest.version === serverManifestVersion) {
-                    resolve(false);
-                    return Promise.reject();
-                }
-                // if we reached here then we need to update. 
-                // in this case we need to load full manifest.json from server
-                return Promise.all([self._listStorageFiles(), self._getServerManifest()]);
-            }).then(function ([storageFiles, serverManifest]) {
-                // save serverManifest so that at the end of the download process we check that it is not changed
-                // because if it's changed then it means that there was a redeployment while we were downloading files
-                self.serverManifestBeforeDownload = serverManifest;
-
-                // Check if new manifest is valid
-                if (!serverManifest.files) {
-                    return Promise.reject(new Error('Downloaded manifest doesn\'t have "files" attribute.'));
-                }
+                    || storageManifest && storageManifest.version === serverManifestVersion;
+                resolve(!dontNeedToSync);
             });
+        });
+    };
 
+    /** performs sync with remote server */
+    CordovaAppLoader.prototype.download = function () {
+        var self = this;
+        return Promise.all(
+            [self._listStorageFiles(), self._getServerManifest()]
+        ).then(function ([storageFiles, serverManifest]) {
+            // save serverManifest so that at the end of the download process we check that it is not changed
+            // because if it's changed then it means that there was a redeployment while we were downloading files
+            self.serverManifestBeforeDownload = serverManifest;
+
+            // Check if new manifest is valid
+            if (!serverManifest.files) {
+                return Promise.reject(new Error('Downloaded manifest doesn\'t have "files" attribute.'));
+            }
         });
     };
 
