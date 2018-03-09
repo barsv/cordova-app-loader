@@ -1,0 +1,1 @@
+- manifest.json file name is hardcoded in gulpfile.js and in loader/update.js

@@ -1,0 +1,142 @@
+{
+  "files": {
+    "app.js": {
+      "filename": "app.js",
+      "version": "83e28948efa84c0cb733cc7dfd773e3505ac0d1ea4a31aed5cb0ab08f53644bd"
+    },
+    "autoupdate.html": {
+      "filename": "autoupdate.html",
+      "version": "e3707382e97656373c88042b72d8da87e02d13ccad97b5a16269e02961b623e9"
+    },
+    "autoupdate.js": {
+      "filename": "autoupdate.js",
+      "version": "f972c63fba01082144d4029825664b9692a2b9ce337a046c322bed929822db99"
+    },
+    "bootstrap.js": {
+      "filename": "bootstrap.js",
+      "version": "c4e9df8dd5af7c4f042da905791fd55c540c852a6b3fd74fea8425b0b0584cbe"
+    },
+    "broken-app/index.js": {
+      "filename": "broken-app/index.js",
+      "version": "59f95692789137a2e8191eadd18d54b7f6e8a5eba2aa9d4704c2e790076387d6"
+    },
+    "broken-app/manifest.json": {
+      "filename": "broken-app/manifest.json",
+      "version": "bba17b674897a3a70fec24eb24e823ff6a125d62cf177a3a6526fbe0914a95a7"
+    },
+    "broken-app/style.css": {
+      "filename": "broken-app/style.css",
+      "version": "14c485dc0f8ce3f68fc59f8d4489ef65d9ad0387c7b3871f5574372d11d060dd"
+    },
+    "index.html": {
+      "filename": "index.html",
+      "version": "b12b28a7a128f75e21e8f1fac5b2d16264cda0f1ec94c5d77b90e54f8c6f4824"
+    },
+    "issues/angular-q/angular.js": {
+      "filename": "issues/angular-q/angular.js",
+      "version": "90755315b5e0f577bebcb805e2ccbe9195bb891b054afc19877b2e2d402b4145"
+    },
+    "issues/angular-q/issue.js": {
+      "filename": "issues/angular-q/issue.js",
+      "version": "21c14a422c3d43c8cf48a5ec68edb2a6743a05be72879bf913479ce503d2b320"
+    },
+    "issues/angular-q/manifest.json": {
+      "filename": "issues/angular-q/manifest.json",
+      "version": "0dbd03e177644dc27df4d4bfc663ac11876572c1f7197a8a8a818d5c2b4b6d1f"
+    },
+    "lib/bluebird.js": {
+      "filename": "lib/bluebird.js",
+      "version": "d24c2d1ef19e2f06cffec3e2ae10c856a5d32c424125571ddbfee9ede74eb36b"
+    },
+    "lib/bootstrap.min.css": {
+      "filename": "lib/bootstrap.min.css",
+      "version": "8f12e090f818bc184a71039927186bc9ca39f89f2284249f27ca0abb4b824238"
+    },
+    "lib/cordova-app-loader-complete.js": {
+      "filename": "lib/cordova-app-loader-complete.js",
+      "version": "7c9f069652e03d042bf8c624db77ef1b73c4fd6ceb71f8780f1b9097ee1882b4"
+    },
+    "lib/CordovaAppLoader.js": {
+      "filename": "lib/CordovaAppLoader.js",
+      "version": "d79e2725de58d647825e0e64d58ffc7169b756dc602c475ff538f8aafffab7af"
+    },
+    "lib/CordovaPromiseFS.js": {
+      "filename": "lib/CordovaPromiseFS.js",
+      "version": "10a9e9a18a41961441b3b8be45620130240a3806c2a337ef057a4c73b250cd8d"
+    },
+    "lib/jquery.min.js": {
+      "filename": "lib/jquery.min.js",
+      "version": "b2ce8462d173fc92b60f98701f45443710e423af1b11525a762008ff2c1a0204"
+    },
+    "slow-download/index.js": {
+      "filename": "slow-download/index.js",
+      "version": "cd5fb80ca4c8d9787e2ff9594751b5053ad992a374228851b6950fea024f930d"
+    },
+    "slow-download/manifest.json": {
+      "filename": "slow-download/manifest.json",
+      "version": "0fd0f5f55859bfd8d8a2cb2cfa2126f9f763e929ac9382001c4186025c095baa"
+    },
+    "slow-download/style.css": {
+      "filename": "slow-download/style.css",
+      "version": "df854cd6b4f7ba2024acd12f15919b7d3cf1f1b1cb252d58cb3e199e26058c71"
+    },
+    "style.css": {
+      "filename": "style.css",
+      "version": "b57363ab100321d6ace6e5993740004c36539d6cb76044385b540b7f87be080a"
+    },
+    "template.html": {
+      "filename": "template.html",
+      "version": "3d85b21152c2e3863d65eaffda29f4636a0e1193faab6f5c294208d5a1903a8a"
+    },
+    "test/cordova-app-loader-tests.js": {
+      "filename": "test/cordova-app-loader-tests.js",
+      "version": "f96ff39310cf0120f44b47fe2b44daab577b44df4c7f6e63b387f2b00e81303c"
+    },
+    "test/cordova-file-cache-tests.js": {
+      "filename": "test/cordova-file-cache-tests.js",
+      "version": "3bd4ba38c2df406088ec806274d33cc59a69ce40cfa893f20547037299e72ca3"
+    },
+    "test/cordova-promise-fs-tests.js": {
+      "filename": "test/cordova-promise-fs-tests.js",
+      "version": "15e01045363cd9d422b495d7dfec782d7b05f576caae0479998c394fb4ceb3dc"
+    },
+    "test/index.html": {
+      "filename": "test/index.html",
+      "version": "c81936fb7f07e7187a72ca614ffc4c4661950ff4495a986720835955aa48b1b0"
+    },
+    "test/init.js": {
+      "filename": "test/init.js",
+      "version": "4c14928529ca333184994a53bed02797742c7078b92b91fa23b9f85e69de2bd8"
+    },
+    "test/manifest.json": {
+      "filename": "test/manifest.json",
+      "version": "393515e372335eeb144b089220efb6761b7ae9591b6300aced891b92d923bcac"
+    },
+    "test/pegasus.js": {
+      "filename": "test/pegasus.js",
+      "version": "14a8715feac17b782b34d2b586380b7bf58dea6a170091a0a16b26e67402a11f"
+    },
+    "test/qunit-1.15.0.css": {
+      "filename": "test/qunit-1.15.0.css",
+      "version": "9ba7e05476db592b986a5c60c6ef536d5877fcf1c515929e1cd70558c668936f"
+    },
+    "test/qunit-1.15.0.js": {
+      "filename": "test/qunit-1.15.0.js",
+      "version": "3def0176b62de338274eb8351b6d1e6b0c79d9a8cf0e89e05bd57235bb76f397"
+    },
+    "update/index.js": {
+      "filename": "update/index.js",
+      "version": "0ea81f3e029a0f43dea7f2470f7abaa599357b6cffac9d87fd1222ebfcbaed90"
+    },
+    "update/manifest.json": {
+      "filename": "update/manifest.json",
+      "version": "1388e4763ad1aa7744029144ae9eba1d8836f63ad40877898bcbe6b153c7b759"
+    },
+    "update/style.css": {
+      "filename": "update/style.css",
+      "version": "043bc5e8b38f73180bd8428e483488148c119d193a55249233dd791cafef3ded"
+    }
+  },
+  "load": [],
+  "version": "4b1aafb24bae391aa3de99705adc82952e63a108b3938f7067707e641fc10535"
+}
