@@ -6,7 +6,7 @@ var path = require('path');
 var manifestFileName = 'manifest.json';
 var manifestVersionFileName = 'manifest-version.json';
 // relative path to the folder with update.html for cordova-app-loader
-var cordovaAppLoaderFolderName = 'loader';
+var cordovaAppLoaderFolderName = 'cordova-app-loader';
 
 // creates manifest.json for https://github.com/markmarijnissen/cordova-app-loader
 // should be run from folder that contains www

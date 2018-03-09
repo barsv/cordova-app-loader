@@ -7,6 +7,6 @@
     <author email="info@madebymark.nl" href="http://www.madebymark.nl">
         Mark Marijnissen
     </author>
-    <content src="loader/update.html"/>
+    <content src="cordova-app-loader/update.html"/>
     <access origin="*" />
 </widget>

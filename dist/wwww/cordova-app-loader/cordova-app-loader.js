@@ -83,7 +83,7 @@
         // manifest-version.json contains hash of manifest.json
         self.manifestVersionFileName = options.manifestVersionFileName || 'manifest-version.json';
         // loaderFolderName is name of the folder with manifests (relative to serverRoot)
-        self.loaderFolderName = options.loaderFolderName || 'loader';
+        self.loaderFolderName = options.loaderFolderName || 'cordova-app-loader';
         // when we load files from server we add timestamp at the end to avoid caching
         self.useCacheBuster = options.useCacheBuster || true;
         // timeout in ms is used for each file loading
