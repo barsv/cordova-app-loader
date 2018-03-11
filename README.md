@@ -5,6 +5,8 @@ cordova-app-loader
 
 Forked from [markmarijnissen/cordova-app-loader](https://github.com/markmarijnissen/cordova-app-loader) and rewritten to simplify the process of integration into existing cordova app.
 
+<span style="color: red;">DON'T USE. DEVELOPMENT IS IN PROGRESS.</span>
+
 todo: rewrite everything below:
 
 1. Write a **manifest.json** to **bootstrap.js** your app.
