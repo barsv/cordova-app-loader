@@ -33,17 +33,9 @@ var manifestTask = function () {
         var allHashes = '';
         allFiles.forEach(function (file) {
             var filename = file.filename.split('\\').join('/');
-            var key = filename;
-            json.files[key] = {};
-            json.files[key]['filename'] = filename;
-            json.files[key]['version'] = file.hash;
+            json.files[filename] = file.hash;
             allHashes += file.hash;// combine all hashes to create total hash for manifest.version
         });
-
-        // json.load will be empty because I don't plan to use reloading functionality. 
-        // I'll create a separate 'update.html' page instead that I don't plan to ever update.
-        // update.html will be loading updates and once done redirect to updated index.html
-        json.load = [];
 
         json.version = getManifestVersion(allHashes);
         return json;

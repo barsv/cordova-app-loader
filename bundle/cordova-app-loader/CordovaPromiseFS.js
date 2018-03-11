@@ -34,9 +34,6 @@ var CordovaPromiseFS =
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -46,6 +43,11 @@ var CordovaPromiseFS =
 /******/ 				get: getter
 /******/ 			});
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -63,12 +65,18 @@ var CordovaPromiseFS =
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 /**
@@ -178,12 +186,14 @@ module.exports = function(options){
     window.FileTransfer = function FileTransfer(){};
     FileTransfer.prototype.download = function download(url,file,win,fail) {
       var xhr = new XMLHttpRequest();
+      if (this.onprogress)
+        xhr.onprogress = this.onprogress;
       xhr.open('GET', url);
       xhr.responseType = "blob";
       xhr.onreadystatechange = function(onSuccess, onError, cb) {
         if (xhr.readyState == 4) {
           if(xhr.status === 200 && !this._aborted){
-            write(file,xhr.response).then(win,fail);
+            remove(file).then(write(file, xhr.response)).then(win,fail);
           } else {
             fail(xhr.status);
           }
@@ -354,7 +364,10 @@ module.exports = function(options){
           if(err.code === 1) {
             resolve(false);
           } else {
-            reject(err);
+            // wrap err into Promises/A+ friendly error so that it will have stack trace
+            var error = new Error('exists failed for [' + path + ']. See innerError for details.');
+            error.innerError = err;
+            reject(error);
           }
         }
       );
@@ -372,7 +385,10 @@ module.exports = function(options){
           if(err.code === 1) {
             resolve(false);
           } else {
-            reject(err);
+            // wrap err into Promises/A+ friendly error so that it will have stack trace
+            var error = new Error('existsDir failed for ' + path + ']. See innerError for details.');
+            error.innerError = err;
+            reject(error);
           }
         }
       );
@@ -629,7 +645,11 @@ module.exports = function(options){
       var attempt = function(err){
         if(transferOptions.retry.length === 0) {
           if(options.debug) console.log('FileTransfer Error: '+serverUrl,err);
-          reject(err);
+          // wrap err into Promises/A+ friendly error so that it will have stack trace
+          var error = new Error('fileTransfer failed from [' + serverUrl + '] to [' 
+            + localPath + ']. See innerError for details.');
+          error.innerError = err;
+          reject(error);
         } else {
 
     		  var transferJob = {
@@ -712,4 +732,5 @@ module.exports = function(options){
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

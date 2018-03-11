@@ -1,1 +1,19 @@
 - manifest.json file name is hardcoded in gulpfile.js and in loader/update.js
+- extract manifestTask from gulpfile.js to separate file for easy integration with existing gulp files
+- add package.json to dist
+- how to add plugins dependencies?
+- how to run ngrok from npm?
+- how to get dynamic ngrok url and patch update.js?
+- localtunnel?
+- jasmine
+- update readme
+- splash screen
+- smooth transition from update.html to index.html
+- spaces in file names on iOS
+- revisit endless loop prevention
+- play with concurrency in CordovaPromiseFs options
+- version of update.html with cancel update button
+- server launch script
+- no connection
+- on active(bring app back from background)
+- add cordova.js path to localstorage, insert it into index.html
